@@ -11,6 +11,10 @@
 		E6CD76272A0B3202000C0C6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD76262A0B3202000C0C6F /* ContentView.swift */; };
 		E6CD76292A0B3203000C0C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6CD76282A0B3203000C0C6F /* Assets.xcassets */; };
 		E6CD762D2A0B3203000C0C6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6CD762C2A0B3203000C0C6F /* Preview Assets.xcassets */; };
+		E6CD76342A0B33B2000C0C6F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6CD76332A0B33B2000C0C6F /* Launch Screen.storyboard */; };
+		E6CD76362A0B349F000C0C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6CD76352A0B349F000C0C6F /* Main.storyboard */; };
+		E6F8C2F12A15CAA700328D2C /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8C2F02A15CAA700328D2C /* QuizViewController.swift */; };
+		E6F8C2F32A15CAD900328D2C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8C2F22A15CAD900328D2C /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		E6CD76282A0B3203000C0C6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6CD762A2A0B3203000C0C6F /* SwiftQuiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftQuiz.entitlements; sourceTree = "<group>"; };
 		E6CD762C2A0B3203000C0C6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6CD76332A0B33B2000C0C6F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E6CD76352A0B349F000C0C6F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E6F8C2F02A15CAA700328D2C /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		E6F8C2F22A15CAD900328D2C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				E6CD76242A0B3202000C0C6F /* SwiftQuizApp.swift */,
+				E6CD76352A0B349F000C0C6F /* Main.storyboard */,
+				E6F8C2F02A15CAA700328D2C /* QuizViewController.swift */,
+				E6F8C2F22A15CAD900328D2C /* ResultViewController.swift */,
+				E6CD76332A0B33B2000C0C6F /* Launch Screen.storyboard */,
 				E6CD76262A0B3202000C0C6F /* ContentView.swift */,
 				E6CD76282A0B3203000C0C6F /* Assets.xcassets */,
 				E6CD762A2A0B3203000C0C6F /* SwiftQuiz.entitlements */,
@@ -127,8 +139,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6CD76342A0B33B2000C0C6F /* Launch Screen.storyboard in Resources */,
 				E6CD762D2A0B3203000C0C6F /* Preview Assets.xcassets in Resources */,
 				E6CD76292A0B3203000C0C6F /* Assets.xcassets in Resources */,
+				E6CD76362A0B349F000C0C6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6F8C2F12A15CAA700328D2C /* QuizViewController.swift in Sources */,
 				E6CD76272A0B3202000C0C6F /* ContentView.swift in Sources */,
 				E6CD76252A0B3202000C0C6F /* SwiftQuizApp.swift in Sources */,
+				E6F8C2F32A15CAD900328D2C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +283,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftQuiz/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift Quiz";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -275,8 +293,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -285,10 +303,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eduardofrederico.SwiftQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,6 +323,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftQuiz/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift Quiz";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -311,8 +333,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -321,10 +343,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eduardofrederico.SwiftQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
