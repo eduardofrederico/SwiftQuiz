@@ -70,14 +70,6 @@
                                 <rect key="frame" x="0.0" y="442" width="375" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBK-Uf-hac">
-                                        <rect key="frame" x="0.0" y="1" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAs-ey-1rq">
                                         <rect key="frame" x="0.0" y="46" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -85,6 +77,9 @@
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="selectAnswer:" destination="wyf-bh-lN4" eventType="touchUpInside" id="2fs-r2-r2z"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTN-0P-xzd">
                                         <rect key="frame" x="0.0" y="91" width="375" height="44"/>
@@ -93,6 +88,9 @@
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="selectAnswer:" destination="wyf-bh-lN4" eventType="touchUpInside" id="26g-AP-mvr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAD-xI-V3m">
                                         <rect key="frame" x="0.0" y="136" width="375" height="44"/>
@@ -101,6 +99,20 @@
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="selectAnswer:" destination="wyf-bh-lN4" eventType="touchUpInside" id="x67-5U-iEz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBK-Uf-hac">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="selectAnswer:" destination="wyf-bh-lN4" eventType="touchUpInside" id="iad-fQ-fr6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
@@ -118,6 +130,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="DLR-Ns-Gl0"/>
                     <connections>
+                        <outlet property="lbQuestion" destination="h4V-Tk-6K7" id="qOH-De-fXL"/>
+                        <outlet property="viTimer" destination="g9a-PU-Dxk" id="2uv-Fo-t4z"/>
+                        <outletCollection property="btAnswers" destination="EBK-Uf-hac" collectionClass="NSMutableArray" id="myZ-5V-MG9"/>
+                        <outletCollection property="btAnswers" destination="OAs-ey-1rq" collectionClass="NSMutableArray" id="exd-bs-9qr"/>
+                        <outletCollection property="btAnswers" destination="mTN-0P-xzd" collectionClass="NSMutableArray" id="ncO-Tr-mOx"/>
+                        <outletCollection property="btAnswers" destination="GAD-xI-V3m" collectionClass="NSMutableArray" id="8Ho-0y-pdX"/>
                         <segue destination="9lx-86-GJM" kind="show" id="Vg4-Zw-ZuV"/>
                     </connections>
                 </viewController>
@@ -177,12 +195,21 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="close:" destination="9lx-86-GJM" eventType="touchUpInside" id="bx4-Zk-oTd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UVv-Bl-WM4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Tv6-gJ-MdY"/>
+                    <connections>
+                        <outlet property="lbAnswered" destination="7ZN-X5-iBC" id="R3P-sq-6Hy"/>
+                        <outlet property="lbCorrect" destination="iSF-Qw-UoB" id="bqR-tR-lSI"/>
+                        <outlet property="lbScore" destination="ghK-LI-Mhg" id="rAX-Ge-f1q"/>
+                        <outlet property="lbWrong" destination="5DM-EQ-KOu" id="8ea-79-zB3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hra-F2-5Ua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60733CD2A1DB8B000C52F07 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60733CC2A1DB8B000C52F07 /* Quiz.swift */; };
+		E60733CF2A1DB8DC00C52F07 /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60733CE2A1DB8DC00C52F07 /* QuizManager.swift */; };
 		E6CD76252A0B3202000C0C6F /* SwiftQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD76242A0B3202000C0C6F /* SwiftQuizApp.swift */; };
 		E6CD76272A0B3202000C0C6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD76262A0B3202000C0C6F /* ContentView.swift */; };
 		E6CD76292A0B3203000C0C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6CD76282A0B3203000C0C6F /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E60733CC2A1DB8B000C52F07 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		E60733CE2A1DB8DC00C52F07 /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		E6CD76212A0B3202000C0C6F /* SwiftQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6CD76242A0B3202000C0C6F /* SwiftQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftQuizApp.swift; sourceTree = "<group>"; };
 		E6CD76262A0B3202000C0C6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				E6CD76352A0B349F000C0C6F /* Main.storyboard */,
 				E6F8C2F02A15CAA700328D2C /* QuizViewController.swift */,
 				E6F8C2F22A15CAD900328D2C /* ResultViewController.swift */,
+				E60733CC2A1DB8B000C52F07 /* Quiz.swift */,
+				E60733CE2A1DB8DC00C52F07 /* QuizManager.swift */,
 				E6CD76332A0B33B2000C0C6F /* Launch Screen.storyboard */,
 				E6CD76262A0B3202000C0C6F /* ContentView.swift */,
 				E6CD76282A0B3203000C0C6F /* Assets.xcassets */,
@@ -154,8 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6F8C2F12A15CAA700328D2C /* QuizViewController.swift in Sources */,
+				E60733CD2A1DB8B000C52F07 /* Quiz.swift in Sources */,
 				E6CD76272A0B3202000C0C6F /* ContentView.swift in Sources */,
 				E6CD76252A0B3202000C0C6F /* SwiftQuizApp.swift in Sources */,
+				E60733CF2A1DB8DC00C52F07 /* QuizManager.swift in Sources */,
 				E6F8C2F32A15CAD900328D2C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
